@@ -1,166 +1,28 @@
+<!DOCTYPE html>
 <html>
-    
-    <head>
-        
-        <title>John Doe Fishing</title>
 
-        <!-- <meta> tags like this are not drawn by the browser, but they do help search engines like (google, bing, and yandex)
-            to learn what the page is about without having to understand the whole thing.
-            If you make life easier for search engines, they will rate your site higher and show it higher in their search results (and get more customers).
-        -->
-        <meta name="description" content="Catches">
+<head>
+    <title>Redfish</title>
+</head>
 
-        <!-- You can also ask search engine robots whether they should list this page in search results or not.
-            This also tells them whether they should follow the links they find on this page to find more results.
-        -->
-        <meta name=”robots” content="index, follow">
+<body>
 
-        <!--The little picture in your browser tab is called a "favicon". 
-            This directive tells the browser where to get that image to display.
-            Locations on the Web are found using URLs. 
-            Sometimes URLs are called HyperReferences (or href for short)
-        -->
-        <link rel="icon" type="Images/png"
-            href="Photos/1.png">
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="RedFish.html">Redfish</a> |
+        <a href="Flounder.html">Flounder</a> |
+        <a href="Black_Drum.html">Black Drum</a>
+    </nav>
 
-        <style>
-            
-            /* This is a CSS-style comment */
+    <h1>Redfish</h1>
 
-            /* This section sets the background color of the entire HTML body*/
-            body {background-color: light cayan;}
+    <p>
+        Redfish are one of my favorite saltwater fish to catch.
+        They fight hard and are fun to target while fishing inshore.
+    </p>
 
-            /* This next section specified what all buttons will look like*/
-            button {
-                background-color: blue;
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-            }      
-            .button-div {
-                text-align: right;
-            }
-            .image-div {
-                text-align: left;
-            }
-            .centered {
-                text-align: left;
-            }
+    <img src="Photos/20513.jpg" width="300">
 
+</body>
 
-
-            #left-column {
-                text-align: center;
-            }
-            #right-column {
-                text-align: center;
-            }
-            .row{
-                display: flex;
-            }
-            .column1{
-                flex: 20%;
-            }
-            .column2{
-                flex: 80%;
-            }
-            header img {
-                height: 80px;
-            }
-            header li {
-                margin: 40px;
-            }
-            header li a {
-                color: black;
-                text-decoration: none;
-            }
-            header {
-                background-color: #111111;
-                height: 80px;
-                display: flex;
-                align-items: center;
-            }
-            header * {
-                display: inline;
-            }
-
-        </style>
-    </head>
-    
-    <body>
-
-        <!-- You may have noticed many websites have a navigation bar at the top of their pages.
-             HTML has a special <nav> tag for creating those inside of a <header>
-        -->
-        <header>
-          John Doe Fishing Portofolio
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a>
-                    <li><a href="Redfish.html">Redfish</a>
-                    <li><a href="Flounder.html">Flounder</a> 
-                    <li><a href="Black_Drum.html">Black Drum</a> 
-                </ul>
-        </nav>
-        </header>
-
-
-        <!-- The <br> tag is a handy way to simply go to the next line and create vertical space.-->
-        <br> 
-
-        <!-- <h> tags are headers for text. The smaller the number after the h, the bigger the header will be shown-->
-        <h1 id="title" class="centered">John Doe Fishing</h1>
-        <h3 id="subtitle" class="centered">Salt Water Fishing Adventures</h3>
-
-        <div class="image-div">
-            <!-- This is how to include an image in HTML. Do you see how it specifies a URL to fetch the image from? -->
-            <img src="Photos/20513.jpg" width="300">
-        </div>
-
-        <br>
-        
-        <div class="button-div">
-            <!-- This is a button. We will use Javascript to make it work and CSS to make it look pretty-->
-            <button id="button1" type="button">Click to turn the title blue</button>
-        </div>
-        
-        <br>
-
-        <!--If you look at any modern and complex web page, you will see tons of <div> tags. 
-            These general-purpose dividers allow you to break up your page into different 
-        sections (like a central column of text with ads on the side, for example) -->
-        <div class="row">
-                <div id="left-column" class="column2">
-                    <h2>
-                        Rocks
-                    </h2>
-                    <p>
-                       using florocarbon leader is the best invention ever created because it is a stand of nylon that is invisble to the fishes eye which is great because fishes actually have great vision. Especially trouts!.
-                    </p>
-                </div>
-                <div id="right-column" class="column1">
-                    <h2>
-                        Fishing
-                    </h2>
-                    <p>
-                   Fishing is the best best sport ever. You are able to spend family time and have the possibillity of catching a sea monster. My dream is to go deep sea fishing one day and catch a blue fin tuna. I would probably win the lottery before i do so.
-                    </p>
-                </div>
-        </div>
-
-        <div>
-            <!-- When creating a website, you may want to lay everything out before you have written the whole content.
-                It is traditional to use fake-latin called "lorum ipsum" as a placeholder. Fake words are better because 
-                they don't distract you from the asthetics -->
-            <h2 class="centered">
-                My Fishing Adventures
-            </h2>
-            <p>I enjoy saltwater fishing and my pockets have been feeling it. I bought a truck specifically for fishing!
-            </p>
-        </div>
-    </body>
 </html>
