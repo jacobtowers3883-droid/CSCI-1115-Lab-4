@@ -1,0 +1,201 @@
+<!-- This is an HTML comment. It gets ignored by the browser when it draws the page. -->
+
+<html>
+    
+    <!--Every HTML document should have a <head> section and a <body> section.
+        Notice how HTML sections start with an opening "tag" like "<head>" and end with a closing "tag" like "</head>" 
+    -->
+    <head>
+        <!-- the <title> tags surround the browser tab title -->
+        <title>Awesome Website</title>
+
+        <!-- <meta> tags like this are not drawn by the browser, but they do help search engines like (google, bing, and yandex)
+            to learn what the page is about without having to understand the whole thing.
+            If you make life easier for search engines, they will rate your site higher and show it higher in their search results (and get more customers).
+        -->
+        <meta name="description" content="TO-DO">
+
+        <!-- You can also ask search engine robots whether they should list this page in search results or not.
+            This also tells them whether they should follow the links they find on this page to find more results.
+        -->
+        <meta name=”robots” content="index, follow">
+
+        <!--The little picture in your browser tab is called a "favicon". 
+            This directive tells the browser where to get that image to display.
+            Locations on the Web are found using URLs. 
+            Sometimes URLs are called HyperReferences (or href for short)
+        -->
+        <link rel="icon" type="image/x-icon" href="https://www.nmsu.edu/_files/images/favicon.ico">
+
+        <!--Javascript allows a website to react when you interact with it. It is defined in <script>
+            tags, and can be placed directly into the HTML or referenced in a separate .js file -->
+        <script>
+            //Javascript comments look like this. You will notice that Javascript code looks somewhat
+            // like python code. They are both high-level languages.
+
+            //This first command tells Javascript to wait to run untill the page has loaded before it starts running.
+            window.onload = function() {
+
+                //The alert function pauses everything and generates a pop-up message
+                alert('This is a pop-up message from Lab 4a! Congratulations on opening lab4a.html in your browser. Click OK to continue.');
+            
+                //This function gets attached to a button in the <body> section to define what the button should do
+                //
+                document.getElementById("button1").addEventListener("click", function(e){
+                    document.getElementById("title").style.color = "gold";
+                });
+            
+            };
+        </script>
+
+        <!--Cascading Style Sheets (CSS) allows you to make the styling of your website consistent 
+            across browsers and specify how everything should look. It can be placed directly into
+            HTML in a <style> tag, or it can be referenced as a separate .css file -->
+        <style>
+            
+            /* This is a CSS-style comment */
+
+            /* This section sets the background color of the entire HTML body*/
+            body {background-color: pink;}
+
+            /* This next section specified what all buttons will look like*/
+            button {
+                background-color: green;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }      
+            .button-div {
+                text-align: right;
+            }
+            .image-div {
+                text-align: left;
+            }
+            .centered {
+                text-align: left;
+            }
+
+
+
+            #left-column {
+                text-align: center;
+            }
+            #right-column {
+                text-align: center;
+            }
+            .row{
+                display: flex;
+            }
+            .column1{
+                flex: 20%;
+            }
+            .column2{
+                flex: 80%;
+            }
+            header img {
+                height: 80px;
+            }
+            header li {
+                margin: 40px;
+            }
+            header li a {
+                color: whitesmoke;
+                text-decoration: none;
+            }
+            header {
+                background-color: #1111;
+                height: 80px;
+                display: flex;
+                align-items: center;
+            }
+            header * {
+                display: inline;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+
+        <!-- You may have noticed many websites have a navigation bar at the top of their pages.
+             HTML has a special <nav> tag for creating those inside of a <header>
+        -->
+        <header>
+            <img src="http://nmsu.edu/_files/images/nmsu-logo-HP.png">
+            <nav>
+                <ul>
+                    <li><a href="https://example.com">NMSU</a> 
+                    <li><a href="https://example.com">UNM</a> 
+                    <li><a href="https://example.com">NMTech</a> 
+                    <li><a href="https://example.com">DACC</a>
+                </ul>
+        </nav>
+        </header>
+
+
+        <!-- The <br> tag is a handy way to simply go to the next line and create vertical space.-->
+        <br> 
+
+        <!-- <h> tags are headers for text. The smaller the number after the h, the bigger the header will be shown-->
+        <h1 id="title" class="centered">Website Title</h1>
+        <h3 id="subtitle" class="centered">Website Subtitle</h3>
+
+        <div class="image-div">
+            <!-- This is how to include an image in HTML. Do you see how it specifies a URL to fetch the image from? -->
+            <img src="https://admissions.nmsu.edu/images/NMSU_HomecomingParade_2023_110223-10.jpg" style="transform: scaleY(-1);">
+        </div>
+
+        <br>
+        
+        <div class="button-div">
+            <!-- This is a button. We will use Javascript to make it work and CSS to make it look pretty-->
+            <button id="button1" type="button">Click to turn the title blue</button>
+        </div>
+        
+        <br>
+
+        <!--If you look at any modern and complex web page, you will see tons of <div> tags. 
+            These general-purpose dividers allow you to break up your page into different 
+        sections (like a central column of text with ads on the side, for example) -->
+        <div class="row">
+                <div id="left-column" class="column2">
+                    <h2>
+                        Rocks
+                    </h2>
+                    <p>
+                        Rocks are the best building material.
+                        Not only are they strong, but they are also heavy.
+                        Additionally they can be combined easily with cement, unlike strawberries.
+                        In fact, strawberries are no good at all for construction when compared to rocks.
+                    </p>
+                </div>
+                <div id="right-column" class="column1">
+                    <h2>
+                        Strawberries
+                    </h2>
+                    <p>
+                        Strawberries are the best fruit.
+                        Not only are they delicious, they are also brightly colored.
+                        Additionally, their seeds are completely edible, unlike rocks.
+                        In fact, rocks are no good at all for eating when compared to strawberries.
+                    </p>
+                </div>
+        </div>
+
+        <div>
+            <!-- When creating a website, you may want to lay everything out before you have written the whole content.
+                It is traditional to use fake-latin called "lorum ipsum" as a placeholder. Fake words are better because 
+                they don't distract you from the asthetics -->
+            <h2 class="centered">
+                Placeholder Text
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </body>
+</html>
